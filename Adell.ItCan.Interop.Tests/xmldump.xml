@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<desktops>
+ <desktop>
+  <type>spice</type>
+  <name>Windows 7 - 001</name>
+  <ip>10.10.0.7</ip>
+  <port>6001</port>
+</desktop>
+ <desktop>
+  <type>spice</type>
+  <name>Windows 7 - N/A</name>
+  <ip>10.10.0.7</ip>
+  <port>6003</port>
+</desktop>
+ <desktop>
+  <type>spice</type>
+  <name>Windows 7 - WTF</name>
+  <ip>10.1.92.7</ip>
+  <port>6001</port>
+</desktop>
+ <desktop>
+  <type>spice</type>
+  <name>Windows 7 - TK</name>
+  <ip>10.1.92.7</ip>
+  <port>6003</port>
+</desktop>
+ <desktop>
+  <type>rdp</type>
+  <name>Windows2K3 RDP</name>
+  <ip>10.0.90.88</ip>
+  <port>3389</port>
+</desktop>
+ <desktop>
+  <type>rdp</type>
+  <name>Windows2K8 RDP</name>
+  <ip>10.1.20.30</ip>
+  <port>3389</port>
+</desktop>
+</desktops>
+</config>

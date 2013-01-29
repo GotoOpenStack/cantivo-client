@@ -1,0 +1,101 @@
+﻿<Window x:Class="Adell.ItClient.Windows.Windows.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Adell.ItClient.Windows.ViewModels"
+        xmlns:Controls="clr-namespace:Adell.ItClient.Windows.Controls" 
+        Title="Settings" Height="360" Width="364" ResizeMode="NoResize" 
+        ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="{x:Type Controls:EditBox}" TargetType="{x:Type Controls:EditBox}" >
+            <Setter Property="HorizontalAlignment" Value="Left"  />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Controls:EditBox}">
+                        <TextBlock x:Name="PART_TextBlockPart" 
+                                   Text="{Binding Path=Value, Mode=TwoWay, RelativeSource = {RelativeSource TemplatedParent}}">
+                        </TextBlock>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <vm:SettingsViewModel x:Key="settingsViewModel" />
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource settingsViewModel}" />
+    </Window.DataContext>
+    <StackPanel>
+        <GroupBox Header="Hosts" Height="220" VerticalAlignment="Top">
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+            <ListView Grid.Row="0"
+                ItemsSource="{Binding Cans}"
+                SelectedItem="{Binding SelectedCan}">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="Margin" Value="0" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                    <GridView>
+                            <GridViewColumn Width="150" Header="Name" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Controls:EditBox Value="{Binding  Name, Mode=TwoWay}"  />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Width="150" Header="Address" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Controls:EditBox Value="{Binding HostName, Mode=TwoWay}"  />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="40">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="x" 
+                                                Command="{Binding Source={StaticResource settingsViewModel}, Path=RemoveCanCommand}"
+                                                CommandParameter="{Binding}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        
+                    </GridView>
+                </ListView.View>
+            </ListView>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="Add" Command="{Binding AddCanCommand}"  />
+                    <Button Grid.Column="1" Content="Remove" Command="{Binding RemoveCanCommand}" />
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Misc" Height="Auto" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Text="Card host" VerticalAlignment="Center" Margin="5"  />
+                <TextBox Grid.Row="0" Grid.Column="1" Name="cardHost" Margin="5" Text="{Binding Config.CardHost, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <CheckBox Grid.Row="1" Grid.Column="1" Content="Use SSH" Margin="5" IsChecked="{Binding Config.UseSsh}" />
+
+            </Grid>
+        </GroupBox>
+    </StackPanel>
+</Window>

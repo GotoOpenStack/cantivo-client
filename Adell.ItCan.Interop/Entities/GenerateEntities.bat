@@ -1,0 +1,1 @@
+xsd /namespace:Adell.ItCan.Interop.Entities /c Entities.xsd

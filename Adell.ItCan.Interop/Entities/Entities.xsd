@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="config" nillable="true" type="config" />
+  <xs:complexType name="config">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="desktops" type="ArrayOfDesktop" />
+      <xs:element minOccurs="0" maxOccurs="1" name="error" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfDesktop">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="desktop" nillable="true" type="desktop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desktop">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="type" type="protocol" />
+      <xs:element minOccurs="1" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ip" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="port" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="protocol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="rdp" />
+      <xs:enumeration value="spice" />
+      <xs:enumeration value="vnc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="protocol" type="protocol" />
+  <xs:element name="desktop" nillable="true" type="desktop" />
+</xs:schema>

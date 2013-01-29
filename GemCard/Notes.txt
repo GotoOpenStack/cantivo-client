@@ -1,0 +1,7 @@
+﻿http://www.ttfn.net/techno/smartcards/iso7816_4.html#ss6_1
+http://www.nxp.com/acrobat_download2/other/identification/M001053_MF1ICS50_rev5_3.pdf
+http://forums.oracle.com/forums/thread.jspa?messageID=7291328
+http://lists.drizzle.com/pipermail/muscle/2006-December/006065.html
+http://www.metratec.com/fileadmin/docs/en/documentation/metraTec_MiFare_Protocol-Guide.pdf
+http://www.springcard.com/download/dev/pmd841p-ac.pdf
+husk at prefixen jeg bruker kommuniserer med leser, ikke kort.

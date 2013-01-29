@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Adell.ItClient.Linux.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MDnsService" Type="System.String" Scope="User">
+      <Value Profile="(Default)">_libvirt._tcp</Value>
+    </Setting>
+    <Setting Name="MDnsDomain" Type="System.String" Scope="User">
+      <Value Profile="(Default)">local</Value>
+    </Setting>
+    <Setting Name="LastUserLogon" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastUserPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseSsh" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FullScreen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WindowsPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spice\spicec.exe</Value>
+    </Setting>
+    <Setting Name="WindowsArgs" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UnixPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/usr/bin/ltsp-localapps</Value>
+    </Setting>
+    <Setting Name="UnixArguments" Type="System.String" Scope="User">
+      <Value Profile="(Default)">spicec</Value>
+    </Setting>
+    <Setting Name="SavePassword" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CardHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">skynet.io</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

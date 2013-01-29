@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Adell.ItClient.Windows.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastUserLogon" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastCan" Type="Adell.ItClient.Common.Models.Can" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MDnsService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">_libvirt._tcp</Value>
+    </Setting>
+    <Setting Name="MDnsDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">local</Value>
+    </Setting>
+    <Setting Name="UseSsh" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FullScreen" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CardHost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">skynet.io</Value>
+    </Setting>
+    <Setting Name="CustomHosts" Type="Adell.ItClient.Common.Models.CanCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

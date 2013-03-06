@@ -166,6 +166,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Adell.ItClient.Windows_TemporaryKey.pfx" />
     <None Include="app.config" />
@@ -192,6 +193,7 @@
       <Link>ExternalBinaries\TightVnc\vncviewer.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\cantivo.png" />
     <Resource Include="Resources\itc_64.ico" />
     <Resource Include="Resources\itc_login_logo.png" />
   </ItemGroup>

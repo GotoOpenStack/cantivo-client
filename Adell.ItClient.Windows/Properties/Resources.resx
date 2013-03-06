@@ -121,7 +121,7 @@
     <value>Connected</value>
   </data>
   <data name="Connecting" xml:space="preserve">
-    <value>Conneting...</value>
+    <value>Connecting...</value>
   </data>
   <data name="DnsLookup" xml:space="preserve">
     <value>Looking up </value>

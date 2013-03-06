@@ -22,10 +22,13 @@ namespace Adell.ItClient.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void OpenAdSite()
+        {
+            System.Diagnostics.Process.Start("http://www.cantivo.org/ads/start.php");
+        }
         public MainWindow()
         {
             InitializeComponent();
-
             try
             {
                 //TODO: IoC or ServiceLocator
@@ -33,12 +36,18 @@ namespace Adell.ItClient.Windows
                 //var canDiscovery = new CanDiscoveryService("_smb._tcp", Settings.Default.MDnsDomain);
                 var loginService = new WindowsLoginService();
                 DataContext = new ViewModels.LoginViewModel(loginService, canDiscovery);
+                
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace);
                 App.Current.Shutdown();
             }
+            finally  {
+                OpenAdSite();
+            }
         }
+
+
     }
 }
